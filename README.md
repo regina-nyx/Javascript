@@ -1,1 +1,1 @@
-regina-nyx.website.io
+regina-nyx.github.io
