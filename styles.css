@@ -18,10 +18,16 @@ h2{
   border:1px solid #333;
   padding:10px;
   text-decoration:none;
-  color:#2e1ae6;
+  color:#000000;
 }
 
 #links > a:hover{
-  background:#2e1ae6;
+  background:#800040;
   color:#ffffff;
+}
+h1{
+  color:#800040 
+}
+h2{
+  color:#800040 
 }
