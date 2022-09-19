@@ -103,7 +103,7 @@ h1{
 }
 
 #grandTotalRow{
-  background:#800040;
+  background:#000000;
   color:#ffffff;
 }
 
@@ -111,7 +111,7 @@ h1{
   text-align:right;
   font-weight:bold;
   width:30%;
-color:#000000
+color:#800040
 }
 
 #totalScore{
