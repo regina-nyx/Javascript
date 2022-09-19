@@ -81,7 +81,7 @@ h1{
 }
 
 #scoreCard{
-  border-top:3px double #000000;
+  border-top:3px double #800040;
   padding-top:20px;
   margin-top:60px;
 }
@@ -89,12 +89,13 @@ h1{
 #scoreCard > .row{
 
   padding:20px 0 20px 0;
-  border-bottom:1px solid #000000;
+  border-bottom:1px solid #800040;
 }
 
 .headerRow{
   font-weight:bold;
   font-size:1.25rem;
+    color:#800040
 }
 
 #grandTotalRow{
