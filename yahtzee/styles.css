@@ -31,6 +31,7 @@ h1{
   text-align:center;
   font-size:60px;
   margin-top:0;
+  color:#800040
 }
 
 #dice{
@@ -68,16 +69,19 @@ h1{
   width: 10%;
   text-align:center;
   font-weight:bold;
+  color:#800040
 }
 
 .diceCount{
   width: 20%;
   text-align:center;
+  color:#800040
 }
 
 .score{
   width: 20%;
   text-align:center;
+  color:#800040
 }
 
 #scoreCard{
@@ -107,12 +111,12 @@ h1{
   text-align:right;
   font-weight:bold;
   width:30%;
-
+color:#800040
 }
 
 #totalScore{
   width:20%;
   text-align:center;
   font-weight:bold;
-
+color:#800040
 }
