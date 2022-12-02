@@ -29,15 +29,11 @@ function toggleHold (diceSelect){
    document.getElementById("die"+diceSelect+"Image").src = document.getElementById("die"+diceSelect+"Image").src.replace("dieWhite", "dieRed");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+function toggleHold (diceSelect)
+{
+var t = document.getElementById("die"+diceSelect+"Image");
+if(t.value=="ON"){
+      t.value="OFF";}
+elseif(t.value=="OFF"){
+      t.value="ON";}
+}
