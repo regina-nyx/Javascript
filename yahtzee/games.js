@@ -32,8 +32,8 @@ function toggleHold (diceSelect){
 function toggleHold (diceSelect)
 {
 var t = document.getElementById("die"+diceSelect+"Image");
-if(t.value=="ON"){
-      t.value="OFF";}
-elseif(t.value=="OFF"){
-      t.value="ON";}
+if(t.value=="dieRed"){
+      t.value="dieWhite";}
+elseif(t.value=="dieWhite"){
+      t.value="dieRed";}
 }
