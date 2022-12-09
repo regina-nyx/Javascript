@@ -60,30 +60,25 @@ function assign(selectedNumber) {
 
 
   /*------------------------------------------------------------------------------------
-  CLASS 8 HOMEWORK
-    Add functionality to reset the game after the numbers have been assigned so that the user can roll another round.
-      
-      1. Reset the dice to be blank and white
-        ***HINT*** -- Look at the for loop in the getHeldDice function for how I selected all the die images, can you use something similar to reset all the die?
-        The src value of a reset die would be "/yahtzee/img/dice/dieWhite_border0.png"
-  
-      2.  Reset the timesRolled variable to 0;
+  Return to top of page at end of resetRoll function. Can't tell it works until I add score function.
   ------------------------------------------------------------------------------------*/
-function resetDice() {
-  let resetDice = [];
+  function resetDice() {
+    let resetDice = [];
     if (scoreForThisRound > 0) {
-       document.getElementById("die" + i + "Image").src = "/yahtzee/img/dice/dieWhite_border0.png";
+      document.getElementById("die" + i + "Image").src = "/yahtzee/img/dice/dieWhite_border0.png";
     }
   }
-  return resetDice;
 }
 
 function resetRoll() {
   let resetRoll = [];
-    if (scoreForThisRound > 0) {
-       let (timesRolled =0)
+  if (scoreForThisRound > 0) {
+    let(timesRolled = 0)
+      }
   }
-}
+
+  
+
 
 //******************************************
 function getHeldDice() {
