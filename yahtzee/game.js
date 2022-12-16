@@ -1,6 +1,6 @@
-let rolledDice = [0, 0, 0, 0, 0];
 let timesRolled = 0;
 let gameScore = 0;
+let availableAssignments = 6;
 
 
 function roll() {
@@ -40,7 +40,7 @@ function toggleHold(diceSelect) {
   }
 }
 
-//ADD SCORE FUNCTION
+
 function assign(selectedNumber) {
   let countOfValidDice = 0;
   let scoreForThisRound = 0;
@@ -58,29 +58,56 @@ function assign(selectedNumber) {
   gameScore += scoreForThisRound;
   document.getElementById("totalScore").innerHTML = gameScore;
 
+  availableAssignments--;
 
-  /*------------------------------------------------------------------------------------
-  Return to top of page at end of resetRoll function. Can't tell it works until I add score function.
-  ------------------------------------------------------------------------------------*/
-  function resetDice() {
-    let resetDice = [];
-    if (scoreForThisRound > 0) {
-      document.getElementById("die" + i + "Image").src = "/yahtzee/img/dice/dieWhite_border0.png";
-    }
+  if (availableAssignments === 0) {
+    setTimeout(gameOver, 500);
   }
+
+  resetRoll();
+
+}
+function resetRoll() {
+  let resetDice = [];
+  for (let dieImage of document.querySelectorAll(".die > img")) {
+    dieImage.src = "/yahtzee/img/dice/dieWhite_border0.png";
+  }
+
+  timesRolled = 0;
+  return resetDice;
+}
+function gameOver() {
+  alert("Game Over! You your score is " + gameScore + ". Good job!");
+  newGame();
 }
 
-function resetRoll() {
-  let resetRoll = [];
-  if (scoreForThisRound > 0) {
-    let(timesRolled = 0)
-      }
-  }
+/******************************************
+NEW GAME
+  - Reset gameScore to 0
+  - Reset timesRolled to 0
+  - Reset dice images
+  - Reset the UI for each score group
+******************************************/
+function newGame() {
 
-  
+  document.getElementById("1Count").innerHTML = '<button onclick="assign(1)">Assign</button>';
+  document.getElementById("2Count").innerHTML = '<button onclick="assign(2)">Assign</button>';
+  document.getElementById("3Count").innerHTML = '<button onclick="assign(3)">Assign</button>';
+  document.getElementById("4Count").innerHTML = '<button onclick="assign(4)">Assign</button>';
+  document.getElementById("5Count").innerHTML = '<button onclick="assign(5)">Assign</button>';
+  document.getElementById("6Count").innerHTML = '<button onclick="assign(6)">Assign</button>';
 
+  document.getElementById("1Score").innerHTML = 0;
+  document.getElementById("2Score").innerHTML = 0;
+  document.getElementById("3Score").innerHTML = 0;
+  document.getElementById("4Score").innerHTML = 0;
+  document.getElementById("5Score").innerHTML = 0;
+  document.getElementById("6Score").innerHTML = 0;
+document.getElementById("totalScore").innerHTML = 0;
+}
 
-//******************************************
+//***************
+
 function getHeldDice() {
   let heldDice = [];
   for (let die of document.querySelectorAll(".die > img")) {
@@ -91,12 +118,9 @@ function getHeldDice() {
   return heldDice;
 }
 
-
 function getDieValue(imageSource) {
   return Number(imageSource.split("/img/")[1].replace(/[^0-9]/ig, ""));
 }
-
-
 
 
 
