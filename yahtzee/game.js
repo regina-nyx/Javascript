@@ -16,8 +16,11 @@ function rollDice() {
   for (i = 0; i < 5; i++) {
     output.push(Math.floor(Math.random() * (6)) + 1);
   }
+  diceSound ()
   return output;
 }
+
+
 
 
 function updateDice() {
@@ -81,13 +84,7 @@ function gameOver() {
   newGame();
 }
 
-/******************************************
-NEW GAME
-  - Reset gameScore to 0
-  - Reset timesRolled to 0
-  - Reset dice images
-  - Reset the UI for each score group
-******************************************/
+
 function newGame() {
 
   document.getElementById("1Count").innerHTML = '<button onclick="assign(1)">Assign</button>';
@@ -106,7 +103,7 @@ function newGame() {
 document.getElementById("totalScore").innerHTML = 0;
 }
 
-//***************
+
 
 function getHeldDice() {
   let heldDice = [];
@@ -121,6 +118,14 @@ function getHeldDice() {
 function getDieValue(imageSource) {
   return Number(imageSource.split("/img/")[1].replace(/[^0-9]/ig, ""));
 }
+
+
+function diceSound(){ 
+  var diceRoll = new Audio("https://yahtzee.robotictheater.repl.co/diceroll.mp3");
+
+diceRoll.play();}
+
+
 
 
 
