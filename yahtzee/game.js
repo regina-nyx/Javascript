@@ -79,10 +79,16 @@ function resetRoll() {
   timesRolled = 0;
   return resetDice;
 }
+
+localStorage.getItem("pastScore");
+
 function gameOver() {
   alert("Game Over! You your score is " + gameScore + ". Good job!");
+alert("Your previous score was " +pastScore)
   newGame();
 }
+
+localStorage.setItem("pastScore", gameScore);
 
 
 function newGame() {
@@ -124,6 +130,8 @@ function diceSound(){
   var diceRoll = new Audio("https://yahtzee.robotictheater.repl.co/diceroll.mp3");
 
 diceRoll.play();}
+
+
 
 
 

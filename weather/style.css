@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+ body{
+  background:#ffffff;
+  font-family:sans-serif;
+  background-image: url(https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg);
+  background-size: cover;
+}
